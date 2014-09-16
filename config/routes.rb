@@ -11,6 +11,5 @@ Rails.application.routes.draw do
    root 'home#index'
 
    # Wildcard for ember paths
-   get '/', to: 'home#index'
    get '*path', to: 'home#index'
 end
