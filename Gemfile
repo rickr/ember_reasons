@@ -36,6 +36,7 @@ gem 'twitter-bootstrap-rails'
 gem 'puma'
 
 gem 'rails_serve_static_assets'
+gem 'rails_12factor'
 
 
 # Use ActiveModel has_secure_password
