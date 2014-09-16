@@ -1,0 +1,17 @@
+article#reasons
+  .panel.panel-primary
+    .panel-heading 
+      h3 Reasons
+    ul.list-group
+    each reason in controller
+      li.list-group-item doubleClick='editReason' class={isCompleted:completed isEditing:editing}
+        if isEditing
+          edit-reason class='edit input-lg' value=reason.text focus-out='acceptChanges' insert-newline='acceptChanges'
+        else
+          h3
+            = reason.text
+            span.pull-right.remove 
+              button.destroy click='destroyReason'
+
+    .panel-footer
+      = input type='text' class='input-lg' placeholder='add a reason' value=newReason action='createReason'
